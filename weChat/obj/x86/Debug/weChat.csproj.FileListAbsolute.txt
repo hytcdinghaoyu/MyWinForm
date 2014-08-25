@@ -1,0 +1,8 @@
+c:\users\student\documents\visual studio 2010\Projects\weChat\weChat\bin\Debug\weChat.exe
+c:\users\student\documents\visual studio 2010\Projects\weChat\weChat\bin\Debug\weChat.pdb
+c:\users\student\documents\visual studio 2010\Projects\weChat\weChat\obj\x86\Debug\weChat.frmMain.resources
+c:\users\student\documents\visual studio 2010\Projects\weChat\weChat\obj\x86\Debug\weChat.Properties.Resources.resources
+c:\users\student\documents\visual studio 2010\Projects\weChat\weChat\obj\x86\Debug\weChat.csproj.GenerateResource.Cache
+c:\users\student\documents\visual studio 2010\Projects\weChat\weChat\obj\x86\Debug\weChat.exe
+c:\users\student\documents\visual studio 2010\Projects\weChat\weChat\obj\x86\Debug\weChat.pdb
+C:\Users\Student\Documents\Visual Studio 2010\Projects\weChat\weChat\obj\x86\Debug\weChat.csprojResolveAssemblyReference.cache
