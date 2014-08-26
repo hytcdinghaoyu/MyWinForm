@@ -1,0 +1,8 @@
+C:\Users\Student\Documents\Visual Studio 2010\Projects\feiyu\feiyu\bin\Debug\feiyu.exe
+C:\Users\Student\Documents\Visual Studio 2010\Projects\feiyu\feiyu\bin\Debug\feiyu.pdb
+C:\Users\Student\Documents\Visual Studio 2010\Projects\feiyu\feiyu\obj\x86\Debug\feiyu.frmMain.resources
+C:\Users\Student\Documents\Visual Studio 2010\Projects\feiyu\feiyu\obj\x86\Debug\feiyu.Properties.Resources.resources
+C:\Users\Student\Documents\Visual Studio 2010\Projects\feiyu\feiyu\obj\x86\Debug\feiyu.UCFrdList.resources
+C:\Users\Student\Documents\Visual Studio 2010\Projects\feiyu\feiyu\obj\x86\Debug\feiyu.csproj.GenerateResource.Cache
+C:\Users\Student\Documents\Visual Studio 2010\Projects\feiyu\feiyu\obj\x86\Debug\feiyu.exe
+C:\Users\Student\Documents\Visual Studio 2010\Projects\feiyu\feiyu\obj\x86\Debug\feiyu.pdb
