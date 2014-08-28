@@ -66,7 +66,7 @@
             // 
             this.lblFrdNick.AutoSize = true;
             this.lblFrdNick.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblFrdNick.Location = new System.Drawing.Point(510, 161);
+            this.lblFrdNick.Location = new System.Drawing.Point(478, 159);
             this.lblFrdNick.Name = "lblFrdNick";
             this.lblFrdNick.Size = new System.Drawing.Size(59, 22);
             this.lblFrdNick.TabIndex = 3;
@@ -104,7 +104,7 @@
             this.Controls.Add(this.txtMsgMain);
             this.Controls.Add(this.txtTalkMain);
             this.Name = "frmChat";
-            this.Text = "聊天主窗口";
+            this.Text = "`";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmChat_FormClosing);
             this.Load += new System.EventHandler(this.frmChat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picFrdHead)).EndInit();

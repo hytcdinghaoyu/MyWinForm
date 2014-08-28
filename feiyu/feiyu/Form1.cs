@@ -20,17 +20,17 @@ namespace feiyu
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Operation.sendMsgToAll("LOGIN");
-        }
-       
+            //Operation.sendMsgToAll("LOGIN");
+        }    
         private void frmMain_Load(object sender, EventArgs e)
         {
             frmMain.CheckForIllegalCrossThreadCalls = false;
             Operation ope = new Operation(this);
             Thread th = new Thread(ope.receiveMsg);
-            th.IsBackground = true;
-            Thread.Sleep(100);
+            th.IsBackground = true;     
             th.Start();
+            Thread.Sleep(100);
+            Operation.sendMsgToAll("LOGIN");
            
         }
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)

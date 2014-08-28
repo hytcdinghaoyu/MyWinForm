@@ -51,7 +51,7 @@ namespace feiyu
         private void btnSend_Click(object sender, EventArgs e)
         {
             UdpClient uc = new UdpClient();
-            string sendMsg = "MSG|" + this.txtMsgMain.Text+"|丁";
+            string sendMsg = "MSG|" + this.txtMsgMain.Text+"|小跳蚤";
             byte[] btMsg = Encoding.Default.GetBytes(sendMsg);
             IPEndPoint ipe = new IPEndPoint(this.curFriend.FriendIP,9527);
             uc.Send(btMsg,btMsg.Length,ipe);

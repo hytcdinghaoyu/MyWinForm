@@ -55,6 +55,7 @@
             this.txtNick.Name = "txtNick";
             this.txtNick.Size = new System.Drawing.Size(62, 21);
             this.txtNick.TabIndex = 1;
+            this.txtNick.Text = "小跳蚤";
             // 
             // labShuoShuo
             // 

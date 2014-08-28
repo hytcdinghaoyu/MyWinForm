@@ -21,7 +21,6 @@
         }
 
         #region 组件设计器生成的代码
-
         /// <summary> 
         /// 设计器支持所需的方法 - 不要
         /// 使用代码编辑器修改此方法的内容。
@@ -44,6 +43,8 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             // 
             // lblNick
             // 
@@ -53,6 +54,7 @@
             this.lblNick.Size = new System.Drawing.Size(41, 12);
             this.lblNick.TabIndex = 1;
             this.lblNick.Text = "阿卡利";
+            this.lblNick.DoubleClick += new System.EventHandler(this.lblNick_DoubleClick);
             // 
             // lblShuoShuo
             // 
@@ -62,6 +64,7 @@
             this.lblShuoShuo.Size = new System.Drawing.Size(77, 12);
             this.lblShuoShuo.TabIndex = 1;
             this.lblShuoShuo.Text = "奉均衡之命！";
+            this.lblShuoShuo.DoubleClick += new System.EventHandler(this.lblShuoShuo_DoubleClick);
             // 
             // UCFrdList
             // 
@@ -74,6 +77,7 @@
             this.Size = new System.Drawing.Size(200, 80);
             this.Load += new System.EventHandler(this.UCFrdList_Load);
             this.Click += new System.EventHandler(this.UCFrdList_Click);
+            this.DoubleClick += new System.EventHandler(this.UCFrdList_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
