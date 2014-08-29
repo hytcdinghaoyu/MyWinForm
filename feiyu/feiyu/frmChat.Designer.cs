@@ -106,7 +106,6 @@
             this.Name = "frmChat";
             this.Text = "`";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmChat_FormClosing);
-            this.Load += new System.EventHandler(this.frmChat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picFrdHead)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -60,12 +60,9 @@ namespace feiyu
         private void frmChat_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.curFriend.IsOpen = false;
-            Operation.friendList.Remove(this.curFriend);
+            frm.friendList.Remove(this.curFriend);
         }
 
-        private void frmChat_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

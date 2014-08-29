@@ -13,5 +13,6 @@ namespace feiyu
         public IPAddress FriendIP { get; set; }
         public bool IsOpen { get; set; }
         public frmChat Fc { get; set; }
+        public List<string> msgList = new List<string>();
     }
 }

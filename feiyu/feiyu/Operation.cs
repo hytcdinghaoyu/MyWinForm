@@ -8,7 +8,7 @@ namespace feiyu
 {
     public class  Operation
     {
-        public static List<friend> friendList = new List<friend>();
+        
         public Operation(frmMain frm) 
         {
             _frm = frm;
@@ -35,6 +35,12 @@ namespace feiyu
             ucf.Top=_frm.pnFrdList.Controls.Count * ucf.Height;
             ucf.myDBClick += new EventHandler(ucf_myDBClick);
             _frm.pnFrdList.Controls.Add(ucf);
+            _frm.friendList.Add(ucf.CurFriend);
+        }
+        public delegate void delegateStart(UCFrdList ucf);
+        public void Start(UCFrdList ucf)
+        {
+            ucf.StartFlash();
         }
         //获取当前被双击的用户对象的Curfriend和Frm属性。
         void ucf_myDBClick(object sender, EventArgs e)  
@@ -48,8 +54,13 @@ namespace feiyu
                 fc.Frm = ucf.Frm;
                 fc.CurFriend = ucf.CurFriend;
                 ucf.CurFriend.Fc = fc;
-                Operation.friendList.Add(ucf.CurFriend);
+                foreach (string str in ucf.CurFriend.msgList)
+                {
+                    ucf.CurFriend.Fc.txtTalkMain.AppendText(str);
+                    //ucf.CurFriend.msgList.Remove(str);
+                }
             }
+            ucf.StopFlash();
         }
         public static IPAddress GetLocalIP()
         {
@@ -89,15 +100,38 @@ namespace feiyu
                     frd.IsOpen = false;
                     deleAddFriend deleadd = new deleAddFriend(AddFriend);
                     _frm.Invoke(deleadd, frd);
-                    sendMsgToAll("ALSOON");
+                    UdpClient uca = new UdpClient();
+                    string astr = "ALSOON|" + _frm.txtNick.Text + "|11|" + _frm.labShuoShuo.Text;
+                    byte[] abt = Encoding.Default.GetBytes(astr);
+                    IPEndPoint aipe = new IPEndPoint(ipe.Address,9527);
+                    uca.Send(abt,abt.Length,aipe);
+                    //sendMsgToAll("ALSOON");
                 }
                 if (datas[0] == "MSG")
                 { 
-                    foreach (friend frd in friendList)
+                    
+                    foreach (friend frd in _frm.friendList)
                     {
                         if (frd.FriendIP.ToString()==ipe.Address.ToString())
-                        {                          
-                            frd.Fc.txtTalkMain.AppendText(datas[2]+":"+datas[1]+"\r\n");
+                        {
+                            if (frd.IsOpen==false)
+                            {
+                                frd.msgList.Add(datas[2]+":"+datas[1]+"\r\n");
+                            }
+                            if (frd.IsOpen == true)
+                            { 
+                                frd.Fc.txtTalkMain.AppendText(datas[2]+":"+datas[1]+"\r\n");
+                            }                          
+                        }
+                    }
+                    //收到谁的消息，谁的头像闪动
+                    foreach (UCFrdList ucf in _frm.pnFrdList.Controls)
+                    {
+                        if (ucf.CurFriend.FriendIP.ToString() == ipe.Address.ToString()&&ucf.CurFriend.IsOpen==false)
+                        {
+                            //ucf.StartFlash();
+                            delegateStart mydele = new delegateStart(Start);
+                            ucf.Invoke(mydele,ucf);
                         }
                     }
                 }
@@ -133,7 +167,7 @@ namespace feiyu
                     break;
                 case "LOGOUT": sendMsg = "LOGOUT|" + _frm.txtNick.Text + "|11|轻轻的我走了！";
                     break;
-                case "ALSOON": sendMsg = "ALSOON|" + _frm.txtNick.Text + "|11|" + _frm.labShuoShuo.Text; ;
+                case "ALSOON": sendMsg = "ALSOON|" + _frm.txtNick.Text + "|11|" + _frm.labShuoShuo.Text;
                     break;
                 default:
                     break;

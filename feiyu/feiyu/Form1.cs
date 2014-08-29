@@ -13,7 +13,7 @@ namespace feiyu
 {
     public partial class frmMain : Form
     {
-        
+        public  List<friend> friendList = new List<friend>();
         public frmMain()
         {
             InitializeComponent();

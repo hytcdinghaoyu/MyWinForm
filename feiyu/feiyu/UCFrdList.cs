@@ -57,6 +57,35 @@ namespace feiyu
             //    this.curFriend.Fc = fc;                
             //    Operation.friendList.Add(this.curFriend);
             //}
+            //StartFlash();
+        }
+        public void StartFlash()
+        {
+            
+            timer1.Enabled = true;
+            timer1.Start();
+            
+        }      
+        void timer1_Tick(object sender, EventArgs e)
+        {
+            if (this.pictureBox1.Visible == true)
+            {
+                this.pictureBox1.Visible = false;
+                return;
+            }
+            if (this.pictureBox1.Visible == false)
+            {
+                this.pictureBox1.Visible = true;
+                return;
+            }
+            //MessageBox.Show("启动计时器");
+        }
+        public void StopFlash()
+        {
+
+            timer1.Stop();
+            this.pictureBox1.Visible = true;
+ 
         }
         private void UCFrdList_Load(object sender, EventArgs e)
         {

@@ -27,9 +27,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNick = new System.Windows.Forms.Label();
             this.lblShuoShuo = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +68,11 @@
             this.lblShuoShuo.Text = "奉均衡之命！";
             this.lblShuoShuo.DoubleClick += new System.EventHandler(this.lblShuoShuo_DoubleClick);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // UCFrdList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -89,5 +96,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblNick;
         private System.Windows.Forms.Label lblShuoShuo;
+        private System.Windows.Forms.Timer timer1;
     }
 }
